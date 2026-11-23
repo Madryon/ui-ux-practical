@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UI/UX Notes + Viva Answers</title>
+<style>
+:root{--bg:#f6f8fb;--card:#fff;--ink:#16202e;--mute:#5a6678;--line:#d9e0ea;--acc:#2f4fd8;--accbg:#e8edff;--key:#fff4d6}
+@media(prefers-color-scheme:dark){:root{--bg:#10151d;--card:#171e29;--ink:#e6ebf2;--mute:#9aa6b8;--line:#2a3443;--acc:#8ea6ff;--accbg:#1f2a4d;--key:#3a3213}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
+nav button{flex:none;border:0;background:none;color:var(--mute);font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;cursor:pointer}
+nav button[aria-selected=true]{background:var(--accbg);color:var(--acc);font-weight:600}
+nav button:focus-visible,summary:focus-visible,.tools button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:26px;margin:8px 0 4px}h2{font-size:20px;margin:28px 0 8px}h3{font-size:16px;margin:18px 0 4px;color:var(--acc)}
+p{margin:6px 0}ul,ol{margin:6px 0;padding-left:22px}li{margin:3px 0}
+.sub{color:var(--mute);margin:0 0 16px}
+section{display:none}section.on{display:block}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 16px 12px;margin:12px 0}
+.key{background:var(--key);border-radius:6px;padding:8px 12px;margin:10px 0}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--accbg)}
+.wrap{overflow-x:auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:6px 0}
+summary{cursor:pointer;padding:9px 14px;font-weight:600}
+details>div{padding:0 14px 10px;border-top:1px solid var(--line)}
+.tools{display:flex;gap:8px;margin:10px 0}
+.tools button{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;padding:5px 12px;border-radius:6px;cursor:pointer}
+@media(prefers-reduced-motion:no-preference){section.on{animation:f .15s}@keyframes f{from{opacity:.4}to{opacity:1}}}
+</style></head><body>
+<nav role="tablist" id="nav"></nav>
+<main>
+<h1>UI/UX Design: Notes and Viva Answers</h1>
+<p class="sub">Read the notes, then open each viva question and check your answer.</p>
+<div class="tools"><button onclick="tg(true)">Expand all answers</button><button onclick="tg(false)">Collapse all</button></div>
+
+<section id="u1" data-t="I Basics">
+<h2>Unit I: Basics</h2>
+<div class="box">
+<h3>Notes</h3>
+<ul>
+<li><b>UI (User Interface):</b> what the user sees and touches: buttons, colours, fonts, layout, icons.</li>
+<li><b>UX (User Experience):</b> the overall feeling of using the product: ease, speed, satisfaction, usefulness.</li>
+<li>UI is the look; UX is how it works for the user. A beautiful app that is hard to use has good UI but bad UX.</li>
+<li><b>User-centered design (UCD):</b> design around the needs, goals and limits of real users, and test with them often.</li>
+</ul>
+<table><tr><th>Point</th><th>UI</th><th>UX</th></tr>
+<tr><td>Focus</td><td>Appearance</td><td>Whole experience</td></tr>
+<tr><td>Concerns</td><td>Colour, type, icons, layout</td><td>Research, flow, ease, satisfaction</td></tr>
+<tr><td>Analogy</td><td>Car's dashboard and seats</td><td>How the drive feels</td></tr></table>
+<h3>Design thinking: 5 stages</h3>
+<ol><li><b>Empathise:</b> understand users through research.</li><li><b>Define:</b> state the problem clearly.</li><li><b>Ideate:</b> brainstorm many solutions.</li><li><b>Prototype:</b> build a quick model.</li><li><b>Test:</b> get user feedback, then repeat.</li></ol>
+<div class="key">UX is iterative: design, test, fix, repeat.</div>
+</div>
+<h3>Viva questions</h3>
+<details><summary>1. What is the difference between UI and UX?</summary><div><p>UI is the visual and interactive surface (buttons, colours, fonts, layout). UX is the overall experience of using the product: how easy, fast and satisfying it is. UI is the look, UX is how it works for the user.</p></div></details>
+<details><summary>2. What is user-centered design?</summary><div><p>An approach where design decisions are based on the needs, goals and limits of real users, who are involved through research and repeated testing throughout the process.</p></div></details>
+<details><summary>3. Name the stages of design thinking.</summary><div><p>Empathise, Define, Ideate, Prototype, Test.</p></div></details>
+<details><summary>4. Why is design thinking iterative?</summary><div><p>User feedback from testing often exposes new problems or ideas, so you go back, refine and test again. Repeating the loop improves the product and avoids building the wrong thing.</p></div></details>
+<details><summary>5. Why is UX important for a business?</summary><div><p>Happier users, fewer errors, less support cost, higher retention and higher sales. Good UX also builds brand trust.</p></div></details>
+<details><summary>6. Can a product have good UI but bad UX? Example.</summary><div><p>Yes. A shopping app with beautiful visuals but a confusing checkout, hidden buttons and slow loading. It looks good but users fail to complete purchases.</p></div></details>
+<details><summary>7. Who is a UX designer and what do they do?</summary><div><p>A professional who makes products easy and enjoyable to use. They do user research, build personas and journey maps, create wireframes and prototypes, run usability tests and improve the design from feedback.</p></div></details>
+</section>
+
+<section id="u2" data-t="II User Research">
+<h2>Unit II: User Research</h2>
+<div class="box">
+<h3>Notes</h3>
+<p>User research finds out who the users are and what they need <b>before</b> you design.</p>
+<div class="wrap"><table><tr><th>Method</th><th>What it is</th><th>Data</th></tr>
+<tr><td>Survey</td><td>Questionnaire; reaches many people</td><td>Quantitative</td></tr>
+<tr><td>Interview</td><td>One-to-one conversation; deep insight</td><td>Qualitative</td></tr>
+<tr><td>Observation</td><td>Watch users in their real environment</td><td>Qualitative</td></tr>
+<tr><td>Competitive analysis</td><td>Compare similar products for strengths, weaknesses, gaps</td><td>Both</td></tr></table></div>
+<ul>
+<li><b>User persona:</b> fictional but realistic profile of a typical user: name, age, job, goals, frustrations, behaviour. Keeps the team focused on real needs.</li>
+<li><b>User journey map:</b> the steps a user takes to reach a goal. For each step: actions, thoughts, emotions, pain points. Shows where to improve.</li>
+<li><b>Quantitative</b> = numbers (survey counts). <b>Qualitative</b> = opinions and reasons (interviews).</li>
+<li><b>Empathy map:</b> a four-box chart of what a user Says, Thinks, Does, Feels.</li>
+</ul>
+</div>
+<h3>Viva questions</h3>
+<details><summary>1. What is user research and why do it first?</summary><div><p>Studying users' needs, behaviour and problems. Do it first so you design for real needs, not assumptions, which avoids costly redesign later.</p></div></details>
+<details><summary>2. What is a user persona? What does it contain?</summary><div><p>A fictional but realistic profile built from research data. It contains name, photo, age, job, goals, frustrations, behaviour and tech comfort. It keeps the team focused on real users.</p></div></details>
+<details><summary>3. What is a journey map? What are pain points?</summary><div><p>A visual of the steps a user takes to reach a goal, with their actions, thoughts and emotions at each step. Pain points are the steps where users get frustrated, confused or stuck; they show where to improve.</p></div></details>
+<details><summary>4. Survey vs interview?</summary><div><p><b>Survey:</b> many people, quick, numeric, shallow. <b>Interview:</b> few people, one-to-one, deep, explains the "why".</p></div></details>
+<details><summary>5. Quantitative vs qualitative research?</summary><div><p>Quantitative gives numbers (how many, how often), for example survey counts. Qualitative gives opinions, reasons and motivations, for example interviews. Use both together.</p></div></details>
+<details><summary>6. What is competitive analysis and why is it useful?</summary><div><p>Comparing similar products to find their strengths, weaknesses and gaps. It shows what works, what to avoid and where your product can stand out.</p></div></details>
+<details><summary>7. What is empathy mapping?</summary><div><p>A chart with four parts: Says, Thinks, Does, Feels. It helps the team understand a user's mindset and emotions.</p></div></details>
+<details><summary>8. How many users do you need for interviews?</summary><div><p>A small group, often 5 to 8, reveals most issues. After that you mostly hear repeated problems.</p></div></details>
+</section>
+
+<section id="u3" data-t="III Wireframing">
+<h2>Unit III: Wireframing and Prototyping</h2>
+<div class="box">
+<h3>Notes</h3>
+<ul>
+<li><b>Wireframe:</b> basic skeleton of a screen: layout and content placement, no colours or images.</li>
+<li><b>Low-fi:</b> quick paper or simple sketches; cheap, fast, good for early ideas.</li>
+<li><b>High-fi:</b> detailed screens with real colours, fonts, images, spacing; looks like the final product.</li>
+<li><b>Prototype:</b> clickable model that lets users try the flow without real code.</li>
+<li><b>Tools:</b> Figma, Adobe XD, Sketch.</li>
+</ul>
+<h3>Figma basics</h3>
+<ul><li><b>Frames:</b> screens or artboards.</li><li><b>Auto-layout:</b> elements resize and space themselves automatically.</li><li><b>Components:</b> reusable pieces (button, card). Edit the main one and all copies update.</li><li><b>Prototype links:</b> connect frames so a click moves to another screen.</li></ul>
+<ul><li><b>Heuristic evaluation:</b> experts review a design against usability rules (Nielsen's heuristics) to find problems.</li>
+<li><b>A/B testing:</b> show versions A and B to different users and compare performance (for example click rate).</li></ul>
+<div class="wrap"><table><tr><th></th><th>Wireframe</th><th>Mockup</th><th>Prototype</th></tr>
+<tr><td>Fidelity</td><td>Low, structure only</td><td>High, static visuals</td><td>High, interactive</td></tr>
+<tr><td>Colour/images</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Clickable</td><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><td>Purpose</td><td>Plan layout</td><td>Show final look</td><td>Test flow</td></tr></table></div>
+</div>
+<h3>Viva questions</h3>
+<details><summary>1. What is a wireframe? What is a prototype?</summary><div><p>A wireframe is a basic skeleton of a screen showing layout and content placement without colours or images. A prototype is a clickable model of the design that lets users try the flow without real code.</p></div></details>
+<details><summary>2. Low-fi vs high-fi wireframe?</summary><div><p>Low-fi: rough sketches, fast and cheap, for early ideas. High-fi: detailed with real colours, fonts, images and spacing; looks like the final product, used for later testing and developer handoff.</p></div></details>
+<details><summary>3. Why start with low-fi?</summary><div><p>It is quick and cheap, so you can try many ideas and change them easily. People give honest feedback on structure instead of colours, and mistakes cost almost nothing.</p></div></details>
+<details><summary>4. What is Figma? What are frames, components and auto-layout?</summary><div><p>Figma is a browser-based collaborative design and prototyping tool. <b>Frames</b> are screens/artboards. <b>Components</b> are reusable elements; changing the main component updates all copies. <b>Auto-layout</b> makes elements resize and space themselves automatically.</p></div></details>
+<details><summary>5. What is a clickable prototype?</summary><div><p>A design whose screens are linked so clicking buttons moves between them, simulating the real app flow for testing without code.</p></div></details>
+<details><summary>6. What is heuristic evaluation?</summary><div><p>Usability experts inspect a design against established rules (Nielsen's 10 heuristics) to find problems, without needing real users.</p></div></details>
+<details><summary>7. What is A/B testing? Example.</summary><div><p>Show version A to one group and version B to another and compare a metric. Example: a green vs blue "Buy now" button; the one with the higher click rate wins.</p></div></details>
+<details><summary>8. Wireframe vs mockup vs prototype?</summary><div><p>Wireframe = structure only. Mockup = static, high-fidelity visual with colours and images. Prototype = interactive, clickable version.</p></div></details>
+<details><summary>9. Benefits of prototyping before development?</summary><div><p>Finds usability problems early, saves development time and cost, lets stakeholders and users give feedback, and gives developers a clear reference.</p></div></details>
+</section>
+
+<section id="u4" data-t="IV Visual Design">
+<h2>Unit IV: Visual and Interaction Design</h2>
+<div class="box">
+<h3>Notes</h3>
+<h3>Colour theory</h3>
+<ul>
+<li>Colour wheel: primary (red, yellow, blue), secondary (green, orange, purple), tertiary (mixes of both).</li>
+<li><b>Schemes:</b> monochromatic (one hue, tints and shades), analogous (neighbours on wheel), complementary (opposites), triadic (three evenly spaced).</li>
+<li>Warm colours feel energetic; cool colours feel calm.</li>
+<li><b>60-30-10 rule:</b> 60% dominant, 30% secondary, 10% accent.</li>
+<li>Meaning: red = danger/error, green = success.</li>
+</ul>
+<h3>Typography</h3>
+<ul><li>Serif (with small strokes) vs sans-serif (without).</li><li>Keep hierarchy: heading, subheading, body, with good line spacing.</li><li>Use no more than 2 or 3 fonts.</li></ul>
+<h3>Other concepts</h3>
+<ul>
+<li><b>Layout and grid:</b> a grid (e.g. 12-column) keeps alignment and spacing consistent. White space improves readability.</li>
+<li><b>Design patterns:</b> proven solutions to common problems: navigation bar, hamburger menu, cards, tabs, search bar.</li>
+<li><b>Consistency:</b> same colours, fonts, behaviour on every screen, so users do not relearn.</li>
+<li><b>Responsive:</b> one flexible layout that rearranges to any screen size. <b>Adaptive:</b> separate fixed layouts for specific screen sizes.</li>
+<li><b>Microinteractions:</b> small animations or feedback: like-button animation, loading spinner, toggle switch.</li>
+</ul>
+</div>
+<h3>Viva questions</h3>
+<details><summary>1. What are the colour harmonies? Explain complementary and analogous.</summary><div><p>Monochromatic, analogous, complementary, triadic. <b>Complementary:</b> colours opposite on the wheel (blue and orange); high contrast, good for call-to-action buttons. <b>Analogous:</b> colours next to each other (blue, blue-green, green); calm and harmonious.</p></div></details>
+<details><summary>2. What is the 60-30-10 rule?</summary><div><p>Use 60% a dominant colour (background), 30% a secondary colour (cards, sections) and 10% an accent (buttons, highlights). It gives balance.</p></div></details>
+<details><summary>3. Serif vs sans-serif? Which is better on screens?</summary><div><p>Serif fonts have small strokes at letter ends (Times New Roman); sans-serif do not (Arial, Roboto). Sans-serif is generally preferred on screens for clean, readable text at small sizes and low resolution.</p></div></details>
+<details><summary>4. What is visual hierarchy?</summary><div><p>Arranging elements so the most important ones get noticed first, using size, colour, contrast, weight and position (heading > subheading > body).</p></div></details>
+<details><summary>5. What is a grid system and why use it?</summary><div><p>A structure of columns and rows (e.g. 12-column) used to place content. It gives alignment, consistent spacing, balance and easier responsive design.</p></div></details>
+<details><summary>6. What is white space?</summary><div><p>The empty area around and between elements. It is not wasted space: it reduces clutter, improves readability and focuses attention.</p></div></details>
+<details><summary>7. What is a design pattern? Examples.</summary><div><p>A proven, reusable solution to a common design problem that users already recognise. Examples: navigation bar, hamburger menu, cards, tabs, search bar.</p></div></details>
+<details><summary>8. Why is consistency important?</summary><div><p>Users learn once and apply everywhere. It reduces confusion and learning effort, builds trust and makes the product look professional.</p></div></details>
+<details><summary>9. Responsive vs adaptive design?</summary><div><p><b>Responsive:</b> one fluid layout that stretches and rearranges continuously to any screen size. <b>Adaptive:</b> several fixed layouts, with the one matching the detected screen size shown.</p></div></details>
+<details><summary>10. What is a microinteraction? Two examples.</summary><div><p>A small animation or feedback for a single action. Examples: like-button animation, loading spinner, toggle switch moving, a password-strength bar. They give feedback and make the product feel alive.</p></div></details>
+</section>
+
+<section id="u5" data-t="V Usability & Access.">
+<h2>Unit V: Usability Testing and Accessibility</h2>
+<div class="box">
+<h3>Nielsen's 10 heuristics (most asked, learn these)</h3>
+<div class="wrap"><table><tr><th>#</th><th>Heuristic</th><th>Meaning / example</th></tr>
+<tr><td>1</td><td>Visibility of system status</td><td>Always show what is happening (loading bar)</td></tr>
+<tr><td>2</td><td>Match between system and real world</td><td>Familiar words and icons (trash can for delete)</td></tr>
+<tr><td>3</td><td>User control and freedom</td><td>Undo, redo, cancel, exit</td></tr>
+<tr><td>4</td><td>Consistency and standards</td><td>Same things look and act the same</td></tr>
+<tr><td>5</td><td>Error prevention</td><td>Stop mistakes early (confirm before delete)</td></tr>
+<tr><td>6</td><td>Recognition rather than recall</td><td>Show options; do not make users remember</td></tr>
+<tr><td>7</td><td>Flexibility and efficiency of use</td><td>Shortcuts for experts</td></tr>
+<tr><td>8</td><td>Aesthetic and minimalist design</td><td>No unnecessary information</td></tr>
+<tr><td>9</td><td>Help users recognise, diagnose, recover from errors</td><td>Clear, plain error messages</td></tr>
+<tr><td>10</td><td>Help and documentation</td><td>Easy-to-find support</td></tr></table></div>
+<div class="key">Memory trick: Status, Match, Control, Consistency, Prevention, Recognition, Flexibility, Aesthetic, Errors, Help.</div>
+<h3>More notes</h3>
+<ul>
+<li><b>Cognitive load:</b> mental effort needed to use an interface. Reduce with simple layouts, chunking, clear labels.</li>
+<li><b>Usability testing:</b> real users do tasks while you observe. Measure task success, time, errors, satisfaction. Steps: plan, recruit, give tasks, observe, record, analyse, fix.</li>
+<li><b>Accessibility:</b> design so everyone, including people with disabilities, can use the product.</li>
+<li><b>WCAG = POUR:</b> Perceivable, Operable, Understandable, Robust.</li>
+<li>Colour contrast minimum <b>4.5:1</b> for normal text; alt text for images; full keyboard navigation; captions for video; readable text sizes.</li>
+<li>Iterative improvement: test, fix, retest.</li>
+</ul>
+</div>
+<h3>Viva questions</h3>
+<details><summary>1. List Nielsen's 10 heuristics.</summary><div><p>Visibility of system status; match between system and real world; user control and freedom; consistency and standards; error prevention; recognition rather than recall; flexibility and efficiency of use; aesthetic and minimalist design; help users recognise, diagnose and recover from errors; help and documentation.</p></div></details>
+<details><summary>2. Explain "visibility of system status" with an example.</summary><div><p>The system should always tell users what is going on through timely feedback. Example: a progress bar during file upload, or "Order placed" confirmation after checkout.</p></div></details>
+<details><summary>3. What is cognitive load and how do you reduce it?</summary><div><p>The mental effort needed to use an interface. Reduce it with simple layouts, chunking information into groups, clear labels, familiar patterns and removing unnecessary elements.</p></div></details>
+<details><summary>4. What is usability testing? How is it done?</summary><div><p>Real users perform tasks on the product while you observe. Steps: plan, recruit users, give tasks, observe, record, analyse, fix. Measure task success, time, errors and satisfaction.</p></div></details>
+<details><summary>5. What is accessibility? Why does it matter?</summary><div><p>Designing so everyone, including people with visual, hearing, motor or cognitive disabilities, can use the product. It matters for inclusion, legal compliance and a bigger audience; it also helps all users (for example captions in noisy places).</p></div></details>
+<details><summary>6. What is WCAG? What does POUR stand for?</summary><div><p>Web Content Accessibility Guidelines, the standard for accessible web content. POUR = Perceivable, Operable, Understandable, Robust.</p></div></details>
+<details><summary>7. What is colour contrast ratio?</summary><div><p>The difference in brightness between text and its background. WCAG requires at least 4.5:1 for normal text so people with low vision can read it.</p></div></details>
+<details><summary>8. What is alt text?</summary><div><p>A short text description of an image, read by screen readers and shown if the image fails to load. It makes images accessible to blind users.</p></div></details>
+<details><summary>9. What is a screen reader?</summary><div><p>Software that reads on-screen content aloud (or in braille) for blind or low-vision users. Examples: NVDA, JAWS, VoiceOver, TalkBack. It depends on alt text, proper headings and labels.</p></div></details>
+<details><summary>10. What is a usability test plan?</summary><div><p>A document describing the test: goals, target users, tasks to be performed, and metrics (success rate, time, errors, satisfaction).</p></div></details>
+<details><summary>11. Heuristic evaluation vs usability testing?</summary><div><p><b>Heuristic evaluation:</b> experts review the design against usability rules; no users needed; fast and cheap. <b>Usability testing:</b> real users try tasks and you observe; shows real behaviour.</p></div></details>
+</section>
+
+<section id="pr" data-t="Practical">
+<h2>Practical exam: what to have ready</h2>
+<div class="box">
+<p>Prepare <b>one complete mini project</b> (food ordering, study planner or college app):</p>
+<ol>
+<li><b>Persona</b> (1 or 2)</li>
+<li><b>Journey map</b></li>
+<li><b>Low-fi sketches</b> (3 or 4 screens)</li>
+<li><b>High-fi screens in Figma:</b> login, home, detail, checkout</li>
+<li><b>Clickable prototype</b> linking those screens</li>
+<li><b>Heuristic evaluation:</b> at least 3 problems and fixes</li>
+</ol>
+<h3>Sample heuristic evaluation (adapt to your app)</h3>
+<div class="wrap"><table><tr><th>Problem</th><th>Heuristic broken</th><th>Fix</th></tr>
+<tr><td>No loading indicator after "Place order"</td><td>Visibility of system status</td><td>Add spinner and confirmation message</td></tr>
+<tr><td>Cart item removed without confirmation</td><td>Error prevention / user control</td><td>Add confirm dialog and Undo</td></tr>
+<tr><td>Error says "Error 402"</td><td>Help users recover from errors</td><td>Plain message: "Card declined. Check number or try another card."</td></tr>
+<tr><td>Different button styles on each screen</td><td>Consistency and standards</td><td>Make one button component in Figma</td></tr></table></div>
+<h3>Quick tips</h3>
+<ul><li>Use Figma components and auto-layout; mention them in the viva.</li><li>Keep to 2 fonts and the 60-30-10 colour rule; check 4.5:1 contrast.</li><li>Be ready to explain every design choice using a concept from Units I to V.</li></ul>
+</div>
+</section>
+</main>
+<script>
+var S=[].slice.call(document.querySelectorAll('section')),N=document.getElementById('nav');
+S.forEach(function(s,i){var b=document.createElement('button');b.textContent=s.dataset.t;b.setAttribute('role','tab');b.onclick=function(){show(i)};N.appendChild(b)});
+function show(i){S.forEach(function(s,j){s.classList.toggle('on',i===j);N.children[j].setAttribute('aria-selected',i===j)});scrollTo(0,0)}
+function tg(o){document.querySelectorAll('details').forEach(function(d){d.open=o})}
+show(0);
+</script>
+</body></html>
