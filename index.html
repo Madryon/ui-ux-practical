@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>UI/UX Notes + Viva Answers</title>
 <style>
 :root{--bg:#f6f8fb;--card:#fff;--ink:#16202e;--mute:#5a6678;--line:#d9e0ea;--acc:#2f4fd8;--accbg:#e8edff;--key:#fff4d6}
 @media(prefers-color-scheme:dark){:root{--bg:#10151d;--card:#171e29;--ink:#e6ebf2;--mute:#9aa6b8;--line:#2a3443;--acc:#8ea6ff;--accbg:#1f2a4d;--key:#3a3213}}
-*{box-sizing:border-box}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{-webkit-text-size-adjust:100%;scroll-padding-top:64px}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
-nav button{flex:none;border:0;background:none;color:var(--mute);font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;cursor:pointer}
+nav{position:sticky;top:0;padding-top:max(8px,env(safe-area-inset-top))!important;scrollbar-width:none;scroll-snap-type:x proximity;z-index:5;background:var(--card);border-bottom:1px solid var(--line);display:flex;gap:4px;overflow-x:auto;padding:8px 12px}
+nav::-webkit-scrollbar{display:none}nav button{scroll-snap-align:center;white-space:nowrap;min-height:44px;border:0;background:none;color:var(--mute);font:inherit;font-size:14px;padding:6px 12px;border-radius:6px;cursor:pointer}
 nav button[aria-selected=true]{background:var(--accbg);color:var(--acc);font-weight:600}
 nav button:focus-visible,summary:focus-visible,.tools button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
-main{max-width:760px;margin:0 auto;padding:20px 16px 60px}
+main{max-width:760px;margin:0 auto;padding:16px max(14px,env(safe-area-inset-left)) calc(40px + env(safe-area-inset-bottom));overflow-wrap:anywhere}
 h1{font-size:26px;margin:8px 0 4px}h2{font-size:20px;margin:28px 0 8px}h3{font-size:16px;margin:18px 0 4px;color:var(--acc)}
 p{margin:6px 0}ul,ol{margin:6px 0;padding-left:22px}li{margin:3px 0}
 .sub{color:var(--mute);margin:0 0 16px}
@@ -22,10 +22,12 @@ table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0}
 th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--accbg)}
 .wrap{overflow-x:auto}
 details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:6px 0}
-summary{cursor:pointer;padding:9px 14px;font-weight:600}
+summary{cursor:pointer;padding:13px 14px;font-weight:600;min-height:48px}
 details>div{padding:0 14px 10px;border-top:1px solid var(--line)}
 .tools{display:flex;gap:8px;margin:10px 0}
-.tools button{border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;padding:5px 12px;border-radius:6px;cursor:pointer}
+.tools button{min-height:44px;flex:1;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:14px;padding:5px 12px;border-radius:6px;cursor:pointer}
+.pn{display:flex;gap:8px;margin:24px 0}.pn button{flex:1;min-height:48px;border:1px solid var(--line);background:var(--card);color:var(--acc);font:inherit;font-weight:600;border-radius:8px;cursor:pointer}.pn button:disabled{opacity:.35}
+@media(max-width:600px){body{font-size:17px}h1{font-size:22px}h2{font-size:19px}.box{padding:4px 12px 12px}li{margin:5px 0}table{font-size:13px}th,td{padding:5px 6px}.wrap table{min-width:420px}}
 @media(prefers-reduced-motion:no-preference){section.on{animation:f .15s}@keyframes f{from{opacity:.4}to{opacity:1}}}
 </style></head><body>
 <nav role="tablist" id="nav"></nav>
@@ -44,10 +46,10 @@ details>div{padding:0 14px 10px;border-top:1px solid var(--line)}
 <li>UI is the look; UX is how it works for the user. A beautiful app that is hard to use has good UI but bad UX.</li>
 <li><b>User-centered design (UCD):</b> design around the needs, goals and limits of real users, and test with them often.</li>
 </ul>
-<table><tr><th>Point</th><th>UI</th><th>UX</th></tr>
+<div class="wrap"><table><tr><th>Point</th><th>UI</th><th>UX</th></tr>
 <tr><td>Focus</td><td>Appearance</td><td>Whole experience</td></tr>
 <tr><td>Concerns</td><td>Colour, type, icons, layout</td><td>Research, flow, ease, satisfaction</td></tr>
-<tr><td>Analogy</td><td>Car's dashboard and seats</td><td>How the drive feels</td></tr></table>
+<tr><td>Analogy</td><td>Car's dashboard and seats</td><td>How the drive feels</td></tr></table></div>
 <h3>Design thinking: 5 stages</h3>
 <ol><li><b>Empathise:</b> understand users through research.</li><li><b>Define:</b> state the problem clearly.</li><li><b>Ideate:</b> brainstorm many solutions.</li><li><b>Prototype:</b> build a quick model.</li><li><b>Test:</b> get user feedback, then repeat.</li></ol>
 <div class="key">UX is iterative: design, test, fix, repeat.</div>
@@ -221,12 +223,14 @@ details>div{padding:0 14px 10px;border-top:1px solid var(--line)}
 <ul><li>Use Figma components and auto-layout; mention them in the viva.</li><li>Keep to 2 fonts and the 60-30-10 colour rule; check 4.5:1 contrast.</li><li>Be ready to explain every design choice using a concept from Units I to V.</li></ul>
 </div>
 </section>
+<div class="pn"><button id="pv" onclick="go(-1)">&larr; Previous</button><button id="nx" onclick="go(1)">Next &rarr;</button></div>
 </main>
 <script>
 var S=[].slice.call(document.querySelectorAll('section')),N=document.getElementById('nav');
 S.forEach(function(s,i){var b=document.createElement('button');b.textContent=s.dataset.t;b.setAttribute('role','tab');b.onclick=function(){show(i)};N.appendChild(b)});
-function show(i){S.forEach(function(s,j){s.classList.toggle('on',i===j);N.children[j].setAttribute('aria-selected',i===j)});scrollTo(0,0)}
+function show(i){if(i<0||i>=S.length)return;cur=i;try{localStorage.setItem('uxTab',i)}catch(e){}document.getElementById('pv').disabled=i===0;document.getElementById('nx').disabled=i===S.length-1;N.children[i].scrollIntoView({inline:'center',block:'nearest'});S.forEach(function(s,j){s.classList.toggle('on',i===j);N.children[j].setAttribute('aria-selected',i===j)});scrollTo(0,0)}
+var cur=0;function go(d){show(cur+d)}
 function tg(o){document.querySelectorAll('details').forEach(function(d){d.open=o})}
-show(0);
+var t=0;try{t=+localStorage.getItem('uxTab')||0}catch(e){}show(t);
 </script>
 </body></html>
